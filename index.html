@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Robot Walk</title>
+    <!-- Include Tailwind CSS via CDN -->
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+</head>
+<body class="flex items-center justify-center min-h-screen bg-gray-100">
+    <div class="bg-white p-6 rounded-lg shadow-lg flex flex-row items-center justify-between">
+        <div class="input-section mr-4">
+            <label for="commands" class="block text-gray-700 font-bold mb-2">คำสั่ง Robot Walk</label>
+            <input type="text" id="commands" value="LWWWWLW" class="border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline">
+            <br><br>
+            <button onclick="executeCommands()" class="justify-end ml-1 text-white bg-gradient-to-br from-purple-600 to-blue-500 hover:bg-gradient-to-bl focus:ring-4 focus:outline-none focus:ring-blue-300 dark:focus:ring-blue-800 font-medium rounded-lg text-sm px-3 py-2 text-center me-2 mb-2">คำนวณ</button>
+
+        </div>
+        <div class="output-section relative ml-9">
+            <canvas id="grid" width="500" height="500" class="border border-gray-300"></canvas>
+            <p class="mt-4 text-lg text-gray-700">ตำแหน่งปัจจุบัน: (<span id="current-x">0</span>, <span id="current-y">0</span>)</p>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
